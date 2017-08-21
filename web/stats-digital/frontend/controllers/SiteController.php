@@ -74,28 +74,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-//        $manager = new \MongoDB\Driver\Manager("mongodb://mongo:27017/test");
-//
-//        $bulk = new \MongoDB\Driver\BulkWrite();
-//        $bulk->insert(['name' => 'John Doe']);
-//
-//        $writeConcern = new \MongoDB\Driver\writeConcern(\MongoDB\Driver\WriteConcern::MAJORITY, 100);
-//        $result = $manager->executeBulkWrite('test.mycollection', $bulk);
-//
-//        var_dump($result);
-
-        // execute command:
-//        $result = Yii::$app->mongodb->createCommand(['listIndexes' => 'system.users'])->execute();
-//var_dump($result);
-//// execute query (find):
-//        $cursor = Yii::$app->mongodb->createCommand(['projection' => ['name' => true]])->query('some_collection');
-//
-//// execute batch (bulk) operations:
-//        Yii::$app->mongodb->createCommand()
-//                ->addInsert(['name' => 'new'])
-//                ->addUpdate(['name' => 'existing'], ['name' => 'updated'])
-//                ->addDelete(['name' => 'old'])
-//                ->executeBatch('customer');
         return $this->render('index');
     }
 
