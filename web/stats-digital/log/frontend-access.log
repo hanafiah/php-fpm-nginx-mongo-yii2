@@ -355,3 +355,5 @@
 172.18.0.1 - - [21/Aug/2017:17:54:51 +0000] "GET /favicon.ico HTTP/1.1" 200 318 "http://www.statsdigital.local/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36"
 172.18.0.1 - - [21/Aug/2017:17:55:05 +0000] "GET / HTTP/1.1" 200 3945 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36"
 172.18.0.1 - - [21/Aug/2017:17:55:05 +0000] "GET /favicon.ico HTTP/1.1" 200 318 "http://www.statsdigital.local/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36"
+172.18.0.1 - - [21/Aug/2017:17:59:34 +0000] "GET / HTTP/1.1" 200 4129 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36"
+172.18.0.1 - - [21/Aug/2017:17:59:50 +0000] "GET /site/about HTTP/1.1" 200 2139 "http://www.statsdigital.local/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36"
