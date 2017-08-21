@@ -10,3 +10,12 @@
 127.0.0.1 www.statsdigital.local admin.statsdigital.local
 ```
 4. mongodb access `localhost:27020`
+5. to use gii
+```sh
+http://www.statsdigital.local/gii
+http://admin.statsdigital.local/gii
+```
+6. to stop docker compose
+```sh
+docker-compose stop
+```
