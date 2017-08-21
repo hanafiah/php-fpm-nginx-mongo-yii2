@@ -9,3 +9,4 @@
 ```sh
 127.0.0.1 www.statsdigital.local admin.statsdigital.local
 ```
+4. mongodb access `localhost:27020`
