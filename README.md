@@ -4,7 +4,10 @@
 
 ### Step  
 1. check your docker `preferences->file sharing`. make sure you've set your mount volume. Make sure to clone this repo under that particular volume. if not, you wont be able to create mount volume when run `docker-compose up`
-![Alt text](/php-fpm-nginx-mongo-yii2/readme/img/sc1.png?raw=true "Docker Preferences")
+
+![Docker Preferences](/readme/img/sc1.png?raw=true "Docker Preferences")
+![Docker File Sharing](/readme/img/sc2.png?raw=true "Docker File Sharing")
+
 2. run `docker-compose up -d`
 3. default host is `http://www.statsdigital.local` ( frontend ) and `http://admin.statsdigital.local` ( backend ) . make sure to register host on your `/etc/hosts` for mac and linux and `C:\Windows\System32\Drivers\etc\hosts` for windows . 
 ```sh
