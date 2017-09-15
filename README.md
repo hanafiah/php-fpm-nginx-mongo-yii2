@@ -23,3 +23,14 @@ http://admin.statsdigital.local/gii
 ```sh
 docker-compose stop
 ```
+
+### Yii
+1. Run init command dalam root folder projek
+```
+init
+```
+
+2. Run Composer update
+```
+composer update
+```
