@@ -11,6 +11,20 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'mongo-gii' => [
+            'class' => 'yii\gii\Module',
+            'allowedIPs' => ['*'],
+            'generators' => [
+                'mongoDbModel' => [
+                    'class' => 'yii\mongodb\gii\model\Generator'
+                ]
+            ],
+        ],
+
+    ],
+
+
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',

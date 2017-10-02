@@ -1,0 +1,201 @@
+2017-09-26 09:37:42 [172.20.0.1][-][a36dc9ef62dc3b0bfbee6e2028c252fd][warning][yii\gii\Module::checkAccess] Access to Gii is denied due to IP address restriction. The requested IP is 172.20.0.1
+2017-09-26 09:37:42 [172.20.0.1][-][a36dc9ef62dc3b0bfbee6e2028c252fd][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to access this page. in /web/stats-digital/vendor/yiisoft/yii2-gii/Module.php:112
+Stack trace:
+#0 /web/stats-digital/vendor/yiisoft/yii2/base/Controller.php(144): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#1 /web/stats-digital/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /web/stats-digital/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii/default/ind...', Array)
+#3 /web/stats-digital/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /web/stats-digital/backend/web/index.php(17): yii\base\Application->run()
+#5 {main}
+2017-09-26 09:37:43 [172.20.0.1][-][a36dc9ef62dc3b0bfbee6e2028c252fd][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.20.0.1
+    in /web/stats-digital/backend/views/layouts/main.php:77
+2017-09-26 09:37:43 [172.20.0.1][-][a36dc9ef62dc3b0bfbee6e2028c252fd][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.20.0.1
+2017-09-26 09:37:42 [172.20.0.1][-][a36dc9ef62dc3b0bfbee6e2028c252fd][info][application] $_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => 'ae3e4f3bd564'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '7.1.9'
+    'GPG_KEYS' => 'A917B1ECDA84AEC2B568FED6F50ABC807BD5DCD0 528995BFEDFBA7191D46839EF9BA0ADA31CBD89E'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-7.1.9.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-7.1.9.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/web/stats-digital'
+    'PHP_SHA256' => 'ec9ca348dd51f19a84dc5d33acfff1fba1f977300604bdac08ed46ae2c281e8c'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_HOST' => 'admin.statsdigital.local'
+    'SCRIPT_FILENAME' => '/web/stats-digital/backend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'admin.statsdigital.local'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.2'
+    'REMOTE_PORT' => '52228'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/web/stats-digital/backend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/gii'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1506418662.584
+    'REQUEST_TIME' => 1506418662
+    'argv' => []
+    'argc' => 0
+]
+2017-09-26 09:37:44 [172.20.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.20.0.1
+2017-09-26 09:37:44 [172.20.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf-backend' => '0809bff76d46d7af9351574b69e63aae94a802e2976bcfd1796ed6ec89a8fe32a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"êwÖ.¿Ìj9ÉVî×¡¯Tè/ÌÊmIxß\'*Áò\";}'
+    'advanced-backend' => 'a36dc9ef62dc3b0bfbee6e2028c252fd'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/site/index'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => 'ae3e4f3bd564'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '7.1.9'
+    'GPG_KEYS' => 'A917B1ECDA84AEC2B568FED6F50ABC807BD5DCD0 528995BFEDFBA7191D46839EF9BA0ADA31CBD89E'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-7.1.9.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-7.1.9.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/web/stats-digital'
+    'PHP_SHA256' => 'ec9ca348dd51f19a84dc5d33acfff1fba1f977300604bdac08ed46ae2c281e8c'
+    'USER' => 'www-data'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://admin.statsdigital.local/gii'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=0809bff76d46d7af9351574b69e63aae94a802e2976bcfd1796ed6ec89a8fe32a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%EAw%D6.%BF%CC%14j9%9D%C9V%0E%EE%D7%A1%7F%AFT%E8%2F%02%CC%CAmIx%DF%27%2A%C1%F2%22%3B%7D; advanced-backend=a36dc9ef62dc3b0bfbee6e2028c252fd'
+    'HTTP_HOST' => 'admin.statsdigital.local'
+    'SCRIPT_FILENAME' => '/web/stats-digital/backend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'admin.statsdigital.local'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.2'
+    'REMOTE_PORT' => '52228'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/web/stats-digital/backend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/index'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1506418664.5613
+    'REQUEST_TIME' => 1506418664
+    'argv' => []
+    'argc' => 0
+]
+2017-09-26 09:37:45 [172.20.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.20.0.1
+    in /web/stats-digital/backend/views/layouts/main.php:77
+    in /web/stats-digital/backend/controllers/SiteController.php:82
+2017-09-26 09:37:45 [172.20.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.20.0.1
+2017-09-26 09:37:44 [172.20.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf-backend' => '0809bff76d46d7af9351574b69e63aae94a802e2976bcfd1796ed6ec89a8fe32a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"êwÖ.¿Ìj9ÉVî×¡¯Tè/ÌÊmIxß\'*Áò\";}'
+    'advanced-backend' => 'a36dc9ef62dc3b0bfbee6e2028c252fd'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/site/index'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => 'ae3e4f3bd564'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '7.1.9'
+    'GPG_KEYS' => 'A917B1ECDA84AEC2B568FED6F50ABC807BD5DCD0 528995BFEDFBA7191D46839EF9BA0ADA31CBD89E'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-7.1.9.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-7.1.9.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/web/stats-digital'
+    'PHP_SHA256' => 'ec9ca348dd51f19a84dc5d33acfff1fba1f977300604bdac08ed46ae2c281e8c'
+    'USER' => 'www-data'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://admin.statsdigital.local/gii'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=0809bff76d46d7af9351574b69e63aae94a802e2976bcfd1796ed6ec89a8fe32a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%EAw%D6.%BF%CC%14j9%9D%C9V%0E%EE%D7%A1%7F%AFT%E8%2F%02%CC%CAmIx%DF%27%2A%C1%F2%22%3B%7D; advanced-backend=a36dc9ef62dc3b0bfbee6e2028c252fd'
+    'HTTP_HOST' => 'admin.statsdigital.local'
+    'SCRIPT_FILENAME' => '/web/stats-digital/backend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'admin.statsdigital.local'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.2'
+    'REMOTE_PORT' => '52228'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/web/stats-digital/backend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1506418664.7602
+    'REQUEST_TIME' => 1506418664
+    'argv' => []
+    'argc' => 0
+]

@@ -1,0 +1,2 @@
+{ "_id" : { "$oid" : "59d1e11f9d3db500067fd6c2" }, "name" : "create-project", "type" : "1", "description" : "user can create project", "rule_name" : "", "data" : "", "created_at" : "", "updated_at" : "" }
+{ "_id" : { "$oid" : "59d1e12f9d3db500067fd6c3" }, "name" : "update-project", "type" : "1", "description" : "user can update project", "rule_name" : "", "data" : "", "created_at" : "", "updated_at" : "" }

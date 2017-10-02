@@ -15,14 +15,18 @@ return [
             'rules' => [
             ],
         ],
+
         'mongodb' => [
             'class' => '\yii\mongodb\Connection',
             'dsn' => 'mongodb://mongo:27017/statsdigital',
         ],
         'authManager' => [
-            'class' => 'yii\rbac\MongoDbManager',
-            'defaultRoles' => ['guest'],
+            //'class' => 'yii\rbac\MongoDbManager',
+            //'defaultRoles' => ['guest'],
+            'class' => 'yii\rbac\DbManager',
         ],
+
+
     ],
     
 ];

@@ -1,0 +1,57 @@
+2017-09-30 06:46:30 [-][-][-][error][ReflectionException] ReflectionException: Class yii\rbac\MongoDbManager does not exist in /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/di/Container.php:424
+Stack trace:
+#0 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(424): ReflectionClass->__construct('yii\\rbac\\MongoD...')
+#1 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('yii\\rbac\\MongoD...')
+#2 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\rbac\\MongoD...', Array, Array)
+#3 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('yii\\rbac\\MongoD...', Array, Array)
+#4 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#5 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(596): yii\di\ServiceLocator->get('authManager', false)
+#6 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/rbac/migrations/m140506_102106_rbac_init.php(25): yii\base\Application->getAuthManager()
+#7 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/rbac/migrations/m140506_102106_rbac_init.php(50): m140506_102106_rbac_init->getAuthManager()
+#8 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(671): m140506_102106_rbac_init->up()
+#9 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m140506_102106_...')
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#11 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#14 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('', Array)
+#15 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#16 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#17 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital/yii(27): yii\base\Application->run()
+#19 {main}
+2017-09-30 06:46:28 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/ys/m50vw_5x4n36sgkpr4k__vpr0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.9WDKjRINtB/Render'
+    'TERM_PROGRAM_VERSION' => '400'
+    'OLDPWD' => '/Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web'
+    'TERM_SESSION_ID' => 'C0355711-773D-41E5-80BD-0808B42CA28D'
+    'USER' => 'fuad'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.HiAynia3gg/Listeners'
+    'PATH' => '/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/fuad/Documents/Docker/php-fpm-nginx-mongo-yii2/web/stats-digital'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/fuad'
+    'LOGNAME' => 'fuad'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => '/usr/bin/php'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1506753988.2194
+    'REQUEST_TIME' => 1506753988
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
