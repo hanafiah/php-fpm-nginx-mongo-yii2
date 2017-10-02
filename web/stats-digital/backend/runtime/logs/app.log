@@ -199,3 +199,270 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2017-10-02 10:32:01 [172.19.0.1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\ConnectionException' with message 'unknown top level operator: $oid' in /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php:286
+Stack trace:
+#0 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php(286): MongoDB\Driver\Manager->executeQuery('statsdigital.us...', Object(MongoDB\Driver\Query), Object(MongoDB\Driver\ReadPreference))
+#1 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php(614): yii\mongodb\Command->query('<span class="st...', '[]')
+#2 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Collection.php(218): yii\mongodb\Command->find('<span class="st...', '[<span class="s...', '[<span class="s...')
+#3 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Query.php(198): yii\mongodb\Collection->find('[<span class="s...', '[]', '[<span class="s...')
+#4 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Query.php(365): yii\mongodb\Query->buildCursor('<span class="ke...')
+#5 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/ActiveQuery.php(149): yii\mongodb\Query->one('<span class="ke...')
+#6 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\mongodb\ActiveQuery->one()
+#7 /var/www/projects/docker-panda/web/stats-digital/common/models/User.php(77): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#8 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(564): common\models\User::findIdentity('[<span class="s...')
+#9 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#10 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#11 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#12 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#13 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getIsGuest()
+#14 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/panels/UserPanel.php(75): yii\base\Component->__get('<span class="st...')
+#15 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\debug\panels\UserPanel->init()
+#16 [internal function]: yii\base\Object->__construct('[<span class="s...')
+#17 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs('[[<span class="...')
+#18 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('<span class="st...', '[]', '[<span class="s...')
+#19 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('<span class="st...', '[]', '[<span class="s...')
+#20 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/Module.php(178): yii\BaseYii::createObject('[<span class="s...')
+#21 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/Module.php(151): yii\debug\Module->initPanels()
+#22 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\debug\Module->init()
+#23 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(158): yii\base\Object->__construct('[]')
+#24 [internal function]: yii\base\Module->__construct('<span class="st...', Object(yii\web\Application), '[]')
+#25 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs('[<span class="s...')
+#26 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#27 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('<span class="st...', '[<span class="s...', '[]')
+#28 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(423): yii\BaseYii::createObject('[<span class="s...', '[<span class="s...')
+#29 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(309): yii\base\Module->getModule('<span class="st...')
+#30 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#31 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(272): yii\web\Application->bootstrap()
+#32 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\base\Application->init()
+#33 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(205): yii\base\Object->__construct('[<span class="s...')
+#34 /var/www/projects/docker-panda/web/stats-digital/backend/web/index.php(17): yii\base\Application->__construct('[<span class="s...')
+#35 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'unknown top level operator: $oid' in /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php:292
+Stack trace:
+#0 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php(614): yii\mongodb\Command->query('<span class="st...', '[]')
+#1 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Collection.php(218): yii\mongodb\Command->find('<span class="st...', '[<span class="s...', '[<span class="s...')
+#2 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Query.php(198): yii\mongodb\Collection->find('[<span class="s...', '[]', '[<span class="s...')
+#3 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Query.php(365): yii\mongodb\Query->buildCursor('<span class="ke...')
+#4 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/ActiveQuery.php(149): yii\mongodb\Query->one('<span class="ke...')
+#5 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\mongodb\ActiveQuery->one()
+#6 /var/www/projects/docker-panda/web/stats-digital/common/models/User.php(77): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#7 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(564): common\models\User::findIdentity('[<span class="s...')
+#8 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#9 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#10 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#11 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#12 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getIsGuest()
+#13 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/panels/UserPanel.php(75): yii\base\Component->__get('<span class="st...')
+#14 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\debug\panels\UserPanel->init()
+#15 [internal function]: yii\base\Object->__construct('[<span class="s...')
+#16 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs('[[<span class="...')
+#17 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('<span class="st...', '[]', '[<span class="s...')
+#18 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('<span class="st...', '[]', '[<span class="s...')
+#19 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/Module.php(178): yii\BaseYii::createObject('[<span class="s...')
+#20 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/Module.php(151): yii\debug\Module->initPanels()
+#21 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\debug\Module->init()
+#22 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(158): yii\base\Object->__construct('[]')
+#23 [internal function]: yii\base\Module->__construct('<span class="st...', Object(yii\web\Application), '[]')
+#24 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs('[<span class="s...')
+#25 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#26 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('<span class="st...', '[<span class="s...', '[]')
+#27 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(423): yii\BaseYii::createObject('[<span class="s...', '[<span class="s...')
+#28 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(309): yii\base\Module->getModule('<span class="st...')
+#29 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#30 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(272): yii\web\Application->bootstrap()
+#31 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\base\Application->init()
+#32 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(205): yii\base\Object->__construct('[<span class="s...')
+#33 /var/www/projects/docker-panda/web/stats-digital/backend/web/index.php(17): yii\base\Application->__construct('[<span class="s...')
+#34 {main}
+2017-10-02 10:32:00 [172.19.0.1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '17e883e43b7bf55d81010ec526971c43b76f674d6f0c28607534795a3f7ee249a:2:{i:0;s:17:\"_identity-backend\";i:1;s:80:\"[{\"$oid\":\"59c9222509b89d0005016792\"},\"viTm0sEqBMP-Uhy7kcXbo64vAnLjGVZu\",2592000]\";}'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '8de50cf7390e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/docker-panda/web/stats-digital/backend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.3'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'REMOTE_PORT' => '40636'
+    'SERVER_ADDR' => '172.19.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.statsdigital.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/docker-panda/web/stats-digital/backend/web/index.php'
+    'HTTP_HOST' => 'admin.statsdigital.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ms;q=0.6,pt;q=0.4'
+    'HTTP_COOKIE' => '_identity-backend=17e883e43b7bf55d81010ec526971c43b76f674d6f0c28607534795a3f7ee249a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A80%3A%22%5B%7B%22%24oid%22%3A%2259c9222509b89d0005016792%22%7D%2C%22viTm0sEqBMP-Uhy7kcXbo64vAnLjGVZu%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1506940320.0384
+    'REQUEST_TIME' => 1506940320
+    'argv' => []
+    'argc' => 0
+]
+2017-10-02 10:32:06 [172.19.0.1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\ConnectionException' with message 'unknown top level operator: $oid' in /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php:286
+Stack trace:
+#0 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php(286): MongoDB\Driver\Manager->executeQuery('statsdigital.us...', Object(MongoDB\Driver\Query), Object(MongoDB\Driver\ReadPreference))
+#1 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php(614): yii\mongodb\Command->query('<span class="st...', '[]')
+#2 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Collection.php(218): yii\mongodb\Command->find('<span class="st...', '[<span class="s...', '[<span class="s...')
+#3 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Query.php(198): yii\mongodb\Collection->find('[<span class="s...', '[]', '[<span class="s...')
+#4 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Query.php(365): yii\mongodb\Query->buildCursor('<span class="ke...')
+#5 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/ActiveQuery.php(149): yii\mongodb\Query->one('<span class="ke...')
+#6 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\mongodb\ActiveQuery->one()
+#7 /var/www/projects/docker-panda/web/stats-digital/common/models/User.php(77): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#8 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(564): common\models\User::findIdentity('[<span class="s...')
+#9 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#10 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#11 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#12 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#13 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getIsGuest()
+#14 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/panels/UserPanel.php(75): yii\base\Component->__get('<span class="st...')
+#15 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\debug\panels\UserPanel->init()
+#16 [internal function]: yii\base\Object->__construct('[<span class="s...')
+#17 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs('[[<span class="...')
+#18 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('<span class="st...', '[]', '[<span class="s...')
+#19 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('<span class="st...', '[]', '[<span class="s...')
+#20 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/Module.php(178): yii\BaseYii::createObject('[<span class="s...')
+#21 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/Module.php(151): yii\debug\Module->initPanels()
+#22 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\debug\Module->init()
+#23 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(158): yii\base\Object->__construct('[]')
+#24 [internal function]: yii\base\Module->__construct('<span class="st...', Object(yii\web\Application), '[]')
+#25 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs('[<span class="s...')
+#26 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#27 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('<span class="st...', '[<span class="s...', '[]')
+#28 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(423): yii\BaseYii::createObject('[<span class="s...', '[<span class="s...')
+#29 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(309): yii\base\Module->getModule('<span class="st...')
+#30 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#31 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(272): yii\web\Application->bootstrap()
+#32 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\base\Application->init()
+#33 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(205): yii\base\Object->__construct('[<span class="s...')
+#34 /var/www/projects/docker-panda/web/stats-digital/backend/web/index.php(17): yii\base\Application->__construct('[<span class="s...')
+#35 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'unknown top level operator: $oid' in /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php:292
+Stack trace:
+#0 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Command.php(614): yii\mongodb\Command->query('<span class="st...', '[]')
+#1 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Collection.php(218): yii\mongodb\Command->find('<span class="st...', '[<span class="s...', '[<span class="s...')
+#2 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Query.php(198): yii\mongodb\Collection->find('[<span class="s...', '[]', '[<span class="s...')
+#3 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/Query.php(365): yii\mongodb\Query->buildCursor('<span class="ke...')
+#4 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-mongodb/ActiveQuery.php(149): yii\mongodb\Query->one('<span class="ke...')
+#5 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\mongodb\ActiveQuery->one()
+#6 /var/www/projects/docker-panda/web/stats-digital/common/models/User.php(77): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#7 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(564): common\models\User::findIdentity('[<span class="s...')
+#8 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#9 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#10 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#11 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#12 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getIsGuest()
+#13 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/panels/UserPanel.php(75): yii\base\Component->__get('<span class="st...')
+#14 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\debug\panels\UserPanel->init()
+#15 [internal function]: yii\base\Object->__construct('[<span class="s...')
+#16 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs('[[<span class="...')
+#17 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('<span class="st...', '[]', '[<span class="s...')
+#18 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('<span class="st...', '[]', '[<span class="s...')
+#19 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/Module.php(178): yii\BaseYii::createObject('[<span class="s...')
+#20 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2-debug/Module.php(151): yii\debug\Module->initPanels()
+#21 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\debug\Module->init()
+#22 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(158): yii\base\Object->__construct('[]')
+#23 [internal function]: yii\base\Module->__construct('<span class="st...', Object(yii\web\Application), '[]')
+#24 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs('[<span class="s...')
+#25 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#26 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('<span class="st...', '[<span class="s...', '[]')
+#27 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(423): yii\BaseYii::createObject('[<span class="s...', '[<span class="s...')
+#28 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(309): yii\base\Module->getModule('<span class="st...')
+#29 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#30 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(272): yii\web\Application->bootstrap()
+#31 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Object.php(107): yii\base\Application->init()
+#32 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(205): yii\base\Object->__construct('[<span class="s...')
+#33 /var/www/projects/docker-panda/web/stats-digital/backend/web/index.php(17): yii\base\Application->__construct('[<span class="s...')
+#34 {main}
+2017-10-02 10:32:06 [172.19.0.1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '17e883e43b7bf55d81010ec526971c43b76f674d6f0c28607534795a3f7ee249a:2:{i:0;s:17:\"_identity-backend\";i:1;s:80:\"[{\"$oid\":\"59c9222509b89d0005016792\"},\"viTm0sEqBMP-Uhy7kcXbo64vAnLjGVZu\",2592000]\";}'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '8de50cf7390e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/docker-panda/web/stats-digital/backend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.3'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'REMOTE_PORT' => '40636'
+    'SERVER_ADDR' => '172.19.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.statsdigital.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/docker-panda/web/stats-digital/backend/web/index.php'
+    'HTTP_HOST' => 'admin.statsdigital.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ms;q=0.6,pt;q=0.4'
+    'HTTP_COOKIE' => '_identity-backend=17e883e43b7bf55d81010ec526971c43b76f674d6f0c28607534795a3f7ee249a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A80%3A%22%5B%7B%22%24oid%22%3A%2259c9222509b89d0005016792%22%7D%2C%22viTm0sEqBMP-Uhy7kcXbo64vAnLjGVZu%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1506940326.0942
+    'REQUEST_TIME' => 1506940326
+    'argv' => []
+    'argc' => 0
+]
