@@ -16170,3 +16170,125 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2017-10-02 10:38:05 [172.19.0.1][59d2165b5981dc0006302382][4c5509ad184527d84178cf33005d8b00][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', 'secret', NULL)
+#1 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php(824): yii\db\Schema->quoteValue('<span class="st...')
+#6 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Command.php(866): yii\db\Command->getRawSql()
+#8 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Command.php(887): yii\db\Command->logQuery('<span class="st...')
+#9 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#10 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#11 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/rbac/DbManager.php(706): yii\db\Query->all(Object(yii\db\Connection))
+#12 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/rbac/DbManager.php(123): yii\rbac\DbManager->getAssignments(Object(MongoDB\BSON\ObjectId))
+#13 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(706): yii\rbac\DbManager->checkAccess(Object(MongoDB\BSON\ObjectId), '<span class="st...', '[]')
+#14 /var/www/projects/docker-panda/web/stats-digital/frontend/controllers/ProjectController.php(67): yii\web\User->can('<span class="st...')
+#15 [internal function]: frontend\controllers\ProjectController->actionCreate()
+#16 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#17 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams('[]')
+#18 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#19 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#20 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /var/www/projects/docker-panda/web/stats-digital/frontend/web/index.php(17): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Connection.php(824): yii\db\Schema->quoteValue('<span class="st...')
+#4 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Command.php(866): yii\db\Command->getRawSql()
+#6 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Command.php(887): yii\db\Command->logQuery('<span class="st...')
+#7 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#8 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#9 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/rbac/DbManager.php(706): yii\db\Query->all(Object(yii\db\Connection))
+#10 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/rbac/DbManager.php(123): yii\rbac\DbManager->getAssignments(Object(MongoDB\BSON\ObjectId))
+#11 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/User.php(706): yii\rbac\DbManager->checkAccess(Object(MongoDB\BSON\ObjectId), '<span class="st...', '[]')
+#12 /var/www/projects/docker-panda/web/stats-digital/frontend/controllers/ProjectController.php(67): yii\web\User->can('<span class="st...')
+#13 [internal function]: frontend\controllers\ProjectController->actionCreate()
+#14 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#15 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams('[]')
+#16 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#17 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#18 /var/www/projects/docker-panda/web/stats-digital/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 /var/www/projects/docker-panda/web/stats-digital/frontend/web/index.php(17): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-10-02 10:38:05 [172.19.0.1][59d2165b5981dc0006302382][4c5509ad184527d84178cf33005d8b00][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.19.0.1
+2017-10-02 10:38:05 [172.19.0.1][59d2165b5981dc0006302382][4c5509ad184527d84178cf33005d8b00][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.19.0.1
+2017-10-02 10:38:04 [172.19.0.1][59d2165b5981dc0006302382][4c5509ad184527d84178cf33005d8b00][info][application] $_COOKIE = [
+    '_identity-frontend' => 'b07778ad41d4d898b42ee9c276bdcdd54a791b1e4100891d9159b3e1f356fe73a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:80:\"[{\"$oid\":\"59c9222509b89d0005016792\"},\"viTm0sEqBMP-Uhy7kcXbo64vAnLjGVZu\",2592000]\";}'
+    '_csrf-frontend' => '68dd1b52b2d841b3981740ae620fea82704007adeccc759450c1f5d98538053fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"64†RŽ³e/3Ð?îË¹sT Z¨À­a\"|\";}'
+    'advanced-frontend' => '4c5509ad184527d84178cf33005d8b00'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => MongoDB\BSON\ObjectId#1
+    (
+        [oid] => '59d2165b5981dc0006302382'
+    )
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '8de50cf7390e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/project/create'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/docker-panda/web/stats-digital/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.3'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'REMOTE_PORT' => '40674'
+    'SERVER_ADDR' => '172.19.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.statsdigital.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/docker-panda/web/stats-digital/frontend/web/index.php'
+    'HTTP_HOST' => 'www.statsdigital.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.statsdigital.local/project/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ms;q=0.6,pt;q=0.4'
+    'HTTP_COOKIE' => '_identity-frontend=b07778ad41d4d898b42ee9c276bdcdd54a791b1e4100891d9159b3e1f356fe73a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A80%3A%22%5B%7B%22%24oid%22%3A%2259c9222509b89d0005016792%22%7D%2C%22viTm0sEqBMP-Uhy7kcXbo64vAnLjGVZu%22%2C2592000%5D%22%3B%7D; _csrf-frontend=68dd1b52b2d841b3981740ae620fea82704007adeccc759450c1f5d98538053fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%2264%86R%1E%05%8E%17%13%B3e%2F3%D0%3F%EE%CB%B9%1Ds%1CT%A0Z%A8%0B%C0%ADa%22%7C%08%22%3B%7D; advanced-frontend=4c5509ad184527d84178cf33005d8b00'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1506940684.3295
+    'REQUEST_TIME' => 1506940684
+    'argv' => []
+    'argc' => 0
+]
