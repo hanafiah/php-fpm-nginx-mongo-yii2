@@ -14,4 +14,4 @@ nbproject
 # windows thumbnail cache
 Thumbs.db
 
-web/stats-digital/frontend/runtime/
+web/stats-digital/frontend/runtime/*
